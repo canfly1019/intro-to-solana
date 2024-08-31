@@ -1,8 +1,16 @@
-import "dotenv/config";
-import { getKeypairFromEnvironment } from "@solana-developers/helpers";
+// 請先在 .env 中放入 SECRET_KEY="[]"
 
 // .env
-// SECRET_KEY="[]
+// SECRET_KEY="[
+//   123,456,789
+// ]"
 
-const keypair = getKeypairFromEnvironment("SECRET_KEY"); 
+import { Keypair } from "@solana/web3.js";
+require('dotenv').config();
+const secretKey = process.env.SECRET_KEY;
+if (!secretKey) {
+  throw new Error("SECRET_KEY is not defined in the .env file");
+}
+
+const keypair = Keypair.fromSecretKey(Uint8Array.from(JSON.parse(secretKey)));
 console.log(keypair.publicKey.toBase58());
