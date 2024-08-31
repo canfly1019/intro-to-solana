@@ -21,7 +21,7 @@
 
 - 使用 ```@solana/web3.js``` 生成 Keypair
     ```npx esrun generate-keypair.ts```
-
+> [如何自訂自訂公鑰的前幾位元](https://solana.com/developers/cookbook/wallets/generate-vanity-address)
 - 取得 Keypair
     ```npx esrun get-public-key.ts```
 
