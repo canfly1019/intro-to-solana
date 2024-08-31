@@ -20,10 +20,10 @@
     ```npm install```
 
 - 使用 ```@solana/web3.js``` 生成 Keypair
-    ```npx esrun npx esrun generate-keypair.ts```
+    ```npx esrun generate-keypair.ts```
 
 - 取得 Keypair
-    ```npx esrun npx esrun get-public-key.ts```
+    ```npx esrun get-public-key.ts```
 
 > secret key 請保管好，不要傳到任何地方！
 
