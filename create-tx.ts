@@ -26,6 +26,10 @@ const sendSolInstruction = SystemProgram.transfer({
  
 transaction.add(sendSolInstruction);
  
-const signature = await sendAndConfirmTransaction(connection, transaction, [keypair]);
+const signature = await sendAndConfirmTransaction(
+    connection,
+    transaction,
+    [keypair]
+);
 
 console.log(`Transaction signature is ${signature}!`);
